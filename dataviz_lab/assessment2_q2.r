@@ -1,0 +1,6 @@
+colors=c("blue","brown")
+Student <- c("Boys","Girls")
+depart <- c("CS","Mech","EEE","ECE")
+Values <- matrix(c(35,15,30,10,20,25,15,40), nrow=2, ncol=4, byrow=FALSE)
+barplot(Values, main="Placement Statistics",xlab="Number of Student",ylab="Department Sourish Gupta - 20BCE0453",col=colors,horiz=TRUE)
+legend("right",Student,cex=1,fill=colors)
