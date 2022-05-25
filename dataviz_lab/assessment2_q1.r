@@ -11,3 +11,4 @@ barplot(data, ylab = "Date", xlab = "Number Of Cases Sourish Gupta - 20BCE0453",
 legend("top", legend = attrs, fill = cols, horiz = TRUE)
 
 #par(init)
+

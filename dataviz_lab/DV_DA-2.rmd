@@ -1,0 +1,72 @@
+---
+output:
+  pdf_document: default
+---
+
+# LAB DA - 2
+
+### Sourish Gupta - 20BCE0453
+
+1\. Create a Data Frame from the file
+
+```{r}
+getwd()
+setwd("/home/salt57/Downloads/")
+getwd()
+df <- read.csv("fortune1000.csv")
+#Sourish Gupta - 20BCE0453
+```
+
+```{r}
+head(df, 10)
+```
+
+2\. How many companies are in each sector?
+
+```{r}
+barplot(table(df$Sector), 
+        main = "Companies in each Sector",
+        ylab = "Frequency", #Label the y axis 
+        col = rainbow(25),
+        cex.names = 0.5,
+        las = 2)
+#Sourish Gupta - 20BCE0453
+```
+
+3\. What are the top 10 industries based on the total revenue
+
+```{r}
+head(df[order(df$Revenue, decreasing = TRUE),][c("Industry", "Revenue")], 10)
+#Sourish Gupta - 20BCE0453
+```
+
+4.  Draw a bar chart to show the revenues of the top 20 companies
+
+```{r}
+top20 <- df[order(df$Revenue, decreasing = TRUE),][c("Company", "Revenue")]
+options(scipen = 100, digits = 4)
+barplot(top20$Revenue[0:20], 
+        main = "Top 20 Companies based on revenue",
+        ylab = "Revenue",
+        col = rainbow(21),
+        names.arg = top20$Company[0:20],
+        cex.names = 0.5,
+        cex.axis = 0.5,
+        las = 2)
+#Sourish Gupta - 20BCE0453
+```
+
+5\. Draw a scatter plot based on revenue and profit of the top 20 companies based on the employee size, use the employee number as the size of the circle
+
+```{r}
+top20_emp_size <- df[order(df$Employees, decreasing = TRUE),][c("Revenue", "Profits", "Employees")]
+plot(top20_emp_size$Revenue[0:20], 
+     top20_emp_size$Profits[0:20], 
+     main = "Profit vs Revenue for top 20 companies based on the emp size", 
+     xlab = "Revenue", 
+     ylab = "Profits",
+     col = "purple",
+     pch = 1,
+     cex = top20_emp_size$Employees[0:20]/min(top20_emp_size$Employees[0:20]))
+#Sourish Gupta - 20BCE0453
+```
