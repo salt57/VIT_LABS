@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Activity 2</title>
+ </head>
+ <body>
+   <h1>Please enter your details in the form below:</h1>
+   <form action="action.php">
+     <fieldset style="vertical-align: middle">
+       <legend>Personal Details</legend>
+       Name:
+       <input type="text" name="name" id="name" required />
+       <br />
+       <br />
+       <label for="email">Email:</label>
+       <input type="email" name="email" id="email" required />
+       <br />
+       <br />
+       <label for="phone">Phone:</label>
+       <input type="tel" name="phone" id="phone" required />
+       <br />
+       <br />
+       <label for="dob">Date of Birth:</label>
+       <input type="date" name="dob" id="dob" required />
+       <br />
+       <br />
+       <label for="address"> Address: </label>
+       <textarea
+         name="address"
+         id="address"
+         cols="30"
+         rows="7"
+         required
+         style="vertical-align: middle"
+       ></textarea>
+       <br />
+       <br />
+       <label for="gender">Gender:</label>
+       <br />
+       &nbsp; &nbsp; male:
+       <input
+         type="radio"
+         name="gender"
+         value="male"
+         style="vertical-align: text-bottom; margin-bottom: 1px"
+       />
+       &nbsp; &nbsp; female:
+       <input
+         type="radio"
+         name="gender"
+         value="female"
+         style="vertical-align: text-bottom; margin-bottom: 1px"
+       />
+     </fieldset>
+     <br />
+     <br />
+     <fieldset>
+       <legend>Choose Password</legend>
+       <label for="password">Password:</label>
+       <input type="password" name="password" id="password" required />
+       <br />
+       <br />
+       <label for="confirmPassword">Confirm Password:</label>
+       <input
+         type="password"
+         name="confirmPassword"
+         id="confirmPassword"
+         required
+       />
+       <br />
+       <br />
+     </fieldset>
+     <br />
+     <br />
+     <fieldset>
+       <legend>Academic Details</legend>
+       <label for="course">Course:</label>
+       <select name="course" id="course" required>
+         <option selected disabled hidden>Select Course</option>
+         <option value="B.Tech">B.Tech</option>
+         <option value="M.Tech">M.Tech</option>
+         <option value="MBA">MBA</option>
+         <option value="MCA">MCA</option>
+       </select>
+       <br />
+       <br />
+       <label for="year">Year:</label>
+       <select name="year" id="year" required>
+         <option selected disabled hidden>Select Year</option>
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+       </select>
+       <br />
+       <br />
+       <label for="roll">Roll No:</label>
+       <input type="number" name="roll" id="roll" required />
+       <br />
+       <br />
+       <label for="cgpa">CGPA:</label>
+       <input type="number" name="cgpa" id="cgpa" required />
+       <br />
+       <br />
+     </fieldset>
+     <br />
+     <br />
+     <fieldset>
+       <legend>Upload Resume</legend>
+       <input type="file" name="resume" id="resume" required />
+     </fieldset>
+     <br />
+     <br />
+     <input type="submit" value="Submit" />
+   </form>
+ </body>
+</html>
