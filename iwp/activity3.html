@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Information</title>
+</head>
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #form1 {
+        width: 600px;
+        background-color: #B6E1FF;
+        border: green 2px solid;
+        border-radius: 15px;
+        margin: 15px auto;
+        padding: 20px;
+    }
+    #form-title {
+        font-size: large;
+        font-weight: bold;
+        padding-left: 28%;
+        color: #0F0F0F;
+    }
+    .labels {
+        font-size: small;
+        font-weight: bold;
+        text-align: right;
+        height: 25px;
+        width: 35%;
+        float: left;
+        border: green 2px solid;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .inputs {
+        font-size: small;
+        font-weight: bold;
+        text-align: left;
+        height: 25px;
+        width: 60%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 15px;
+    }
+    #select1 {
+        margin: 12px;
+    }
+    #remarks {
+        width: 98%;
+        height: 45px;
+        border: green 2px solid;
+        margin: 10px 0px;
+    }
+    #submit-button {
+        width: 60%;
+        height: 30px;
+        background-color: #023401;
+        color: white;
+        border: green 2px solid;
+        border-radius: 5px;
+        margin-left: 20%;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <form action="" id="form1">
+        <p id="form-title">Course Information</p>
+        <!-- name -->
+        <p class="labels" for="name">Name</p>
+        <input class="inputs" type="text" name="name" id="name" placeholder="Enter your name" required>
+        <!-- email -->
+
+        <p class="labels" for="email">Email</p>
+        <input class="inputs" type="email" name="email" id="email" placeholder="Enter your email" required>
+        <!-- gender dropdown -->
+        <p class="labels" for="gender">Gender</p>
+        <select class="inputs" id="select1">
+            <!-- male female or other -->
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <br>
+        <!-- date of birth -->
+        <p class="labels" for="dob">Date of Birth</p>
+        <input class="inputs" type="date" name="dob" id="dob" required>
+        <!-- course name -->
+        <p class="labels" for="course">Course Name</p>
+        <input class="inputs" type="text" name="course" id="course" placeholder="Enter course name" required>
+        <!-- course code -->
+        <p class="labels" for="code">Course Code</p>
+        <input class="inputs" type="text" name="code" id="code" placeholder="Enter course code" required>
+        <!-- slot -->
+        <p class="labels" for="slot">Slot</p>
+        <input class="inputs" type="text" name="slot" id="slot" placeholder="Enter slot" required>
+        <!-- mobile number -->
+        <p class="labels" for="mobile">Mobile Number</p>
+        <input class="inputs" type="tel" name="mobile" id="mobile" placeholder="Enter mobile number" required>
+        <!-- remarks -->
+        <textarea name="remarks" id="remarks" cols="30" rows="10" placeholder="Remarks"></textarea>
+        <!-- submit button -->
+        <input type="submit" value="Submit" id="submit-button">
+    </form>
+</body>
+</html>
