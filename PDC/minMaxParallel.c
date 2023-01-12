@@ -13,6 +13,8 @@ int main(int argc, char const *argv[])
     {
         a[i] = rand() % ARR_SIZE;
     }
+    
+    printf("Sourish Gupta - 20BCE0453\n\n\n");
 
 #pragma omp parallel sections
     {
@@ -27,7 +29,7 @@ int main(int argc, char const *argv[])
                     min = a[i];
             }
             t2 = omp_get_wtime();
-            printf("Min = %d \ntime = %f\n\n", min, (t2 - t1));
+            printf("Min = %d \ntime = %f start time = %f\n\n", min, (t2 - t1), t1);
         }
 #pragma omp section
         {
@@ -40,9 +42,8 @@ int main(int argc, char const *argv[])
                     max = a[i];
             }
             t2 = omp_get_wtime();
-            printf("Max = %d \ntime = %f\n\n", max, (t2 - t1));
+            printf("Max = %d \ntime = %f start time= %f\n\n", max, (t2 - t1), t1);
         }
     }
-
     return 0;
 }
