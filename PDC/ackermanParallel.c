@@ -31,7 +31,7 @@ int ack(int m, int n)
 
 int main(int argc, char const *argv[])
 {
-    printf("%d ", ack(50, 60));
+    printf("%d ", ack(8, 5));
 
     return 0;
 }
