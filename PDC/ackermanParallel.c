@@ -55,6 +55,7 @@ int ackSeq(int m, int n)
 
 int main(int argc, char const *argv[])
 {
+    printf("Sourish Gupta - 20BCE0453\n\n");
     omp_set_num_threads(4);
     double t1, t2, s1, s2;
     t1 = omp_get_wtime();
