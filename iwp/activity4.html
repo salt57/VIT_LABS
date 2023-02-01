@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 4</title>
+    <style>
+      #outside {
+        width: 500px;
+        height: auto;
+        background-color: #565656;
+        margin: 50px auto;
+        padding: 20px;
+        border: 20px solid #000;
+      }
+      #gender {
+        width: 100%;
+      }
+      td {
+        padding: 10px 2px;
+      }
+      #submit {
+        background-color: #f1f1f1;
+        color: #000;
+        border: 2px solid #f2f2f2;
+        padding: 5px;
+      }
+      #passwdstrength {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function check() {
+        console.log("check");
+        var login = document.getElementById("Login").value;
+        var password = document.getElementById("password").value;
+        var confirm = document.getElementById("confirm-password").value;
+        var email = document.getElementById("email").value;
+        var msg = document.getElementById("msg");
+        var emailRegex = /(?=.*@).*/;
+        var loginRegex = /.{8,}/;
+        var passwdRegex = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{16,}/;
+        var msgs = [];
+        if (login == "" || login === undefined) {
+          msgs.push("Login username is required");
+          document.getElementById("Login").style.backgroundColor = "#FDB0B3";
+        } else if (!loginRegex.test(login)) {
+          msgs.push("Login username must be at least 8 characters long");
+          document.getElementById("Login").style.backgroundColor = "#FDB0B3";
+        } else {
+          document.getElementById("Login").style.backgroundColor = "#DEFDA0";
+        }
+        if (password == "" || password === undefined) {
+          msgs.push("Password is required");
+          document.getElementById("password").style.backgroundColor = "#FDB0B3";
+        } else if (passwdRegex.test(password)) {
+          document.getElementById("passwdstrength").innerHTML = "Strong";
+          document.getElementById("password").style.backgroundColor = "#DEFDA0";
+        } else {
+          document.getElementById("passwdstrength").innerHTML = "Weak";
+          document.getElementById("password").style.backgroundColor = "#DEFDA0";
+        }
+        if (password == "" || password === undefined) {
+          document.getElementById("confirm-password").style.backgroundColor =
+            "#FDB0B3";
+        } else if (password != confirm)
+          msgs.push("Password and confirm password do not match");
+        else {
+          document.getElementById("confirm-password").style.backgroundColor =
+            "#DEFDA0";
+        }
+        if (email == "" || email === undefined) {
+          msgs.push("Mail is wrong");
+          document.getElementById("email").style.backgroundColor = "#FDB0B3";
+        } else if (!emailRegex.test(email)) {
+          msgs.push("Mail is wrong");
+          document.getElementById("email").style.backgroundColor = "#FDB0B3";
+        } else {
+          document.getElementById("email").style.backgroundColor = "#DEFDA0";
+        }
+        if (msgs.length === 0) {
+          msg.innerHTML = "";
+          return true;
+        } else {
+          msg.innerHTML = "";
+          for (var i = 0; i < msgs.length; i++) {
+            msg.innerHTML = msg.innerHTML + msgs[i] + "<br>";
+          }
+          return false;
+        }
+      }
+    </script>
+    <div id="outside">
+      <table>
+        <tr>
+          <td>
+            <label for="Login">Login</label>
+          </td>
+          <td>
+            <input onchange="check()" type="text" name="Login" id="Login" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="password">Password</label>
+          </td>
+          <td>
+            <input
+              onchange="check()"
+              type="password"
+              name="password"
+              id="password"
+            />
+          </td>
+          <td>
+            <p id="passwdstrength"></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="confirm-password">Confirm Password</label>
+          </td>
+          <td>
+            <input
+              onchange="check()"
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="gender">Gender</label>
+          </td>
+          <td>
+            <select name="gender" id="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email">Email</label>
+          </td>
+          <td>
+            <input onchange="check()" type="email" name="email" id="email" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button
+              value="Register"
+              id="submit"
+              onclick="document.getElementById('msg').innerHTML = check()? 'registered successfully!!': 'Invalid Details'"
+            >
+              Register
+            </button>
+          </td>
+        </tr>
+      </table>
+      <div id="msg"></div>
+    </div>
+  </body>
+</html>
