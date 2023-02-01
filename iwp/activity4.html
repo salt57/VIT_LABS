@@ -66,9 +66,11 @@
         if (password == "" || password === undefined) {
           document.getElementById("confirm-password").style.backgroundColor =
             "#FDB0B3";
-        } else if (password != confirm)
+        } else if (password != confirm) {
           msgs.push("Password and confirm password do not match");
-        else {
+          document.getElementById("confirm-password").style.backgroundColor =
+            "#FDB0B3";
+        } else {
           document.getElementById("confirm-password").style.backgroundColor =
             "#DEFDA0";
         }
