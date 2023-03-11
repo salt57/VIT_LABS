@@ -95,7 +95,7 @@
         }
       }
     </script>
-    <div id="outside">
+    <form id="outside" action="activity5.php" method="post" enctype="multipart/form-data">
       <table>
         <tr>
           <td>
@@ -155,6 +155,9 @@
           </td>
         </tr>
         <tr>
+          <td colspan="2"><input type="file" name="file"></td>
+        </tr>
+        <tr>
           <td>
             <button
               value="Register"
@@ -167,6 +170,6 @@
         </tr>
       </table>
       <div id="msg"></div>
-    </div>
+    </form>
   </body>
 </html>
