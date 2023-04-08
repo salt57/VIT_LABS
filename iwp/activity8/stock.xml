@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE stock SYSTEM "activity8.dtd">
+<stock>
+   <item>
+      <name>Aspirin</name>
+      <quantity>1000</quantity>
+      <price>0.1</price>
+   </item>
+   <item>
+      <name>Paracetamol</name>
+      <quantity>500</quantity>
+      <price>0.2</price>
+   </item>
+   <item>
+      <name>Band-Aid</name>
+      <quantity>200</quantity>
+      <price>0.5</price>
+   </item>
+</stock>

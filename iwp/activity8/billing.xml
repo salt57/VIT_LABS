@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE billing SYSTEM "activity8.dtd">
+<billing>
+   <patient>
+      <name>John Smith</name>
+      <dob>1980-01-01</dob>
+      <gender>M</gender>
+      <bill>
+         <item>
+            <name>Aspirin</name>
+            <quantity>5</quantity>
+            <price>0.1</price>
+         </item>
+         <item>
+            <name>Paracetamol</name>
+            <quantity>10</quantity>
+            <price>0.2</price>
+         </item>
+      </bill>
+      <total>3.0</total>
+   </patient>
+   <patient>
+      <name>Jane Doe</name>
+      <dob>1990-02-01</dob>
+      <gender>F</gender>
+      <bill>
+         <item>
+            <name>Aspirin</name>
+            <quantity>2</quantity>
+            <price>0.1</price>
+         </item>
+         <item>
+            <name>Band-Aid</name>
+            <quantity>5</quantity>
+            <price>0.5</price>
+         </item>
+      </bill>
+      <total>2.5</total>
+   </patient>
+</billing>

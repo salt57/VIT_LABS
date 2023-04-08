@@ -1,0 +1,18 @@
+<!ELEMENT medical (stock, billing, sales)>
+
+<!ELEMENT stock (item+)>
+<!ELEMENT item (name, quantity, price)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT quantity (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+
+<!ELEMENT billing (patient+)>
+<!ELEMENT patient (name, dob, gender, bill, total)>
+<!ELEMENT dob (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>
+<!ELEMENT bill (item+)>
+<!ELEMENT total (#PCDATA)>
+
+<!ELEMENT sales (day+)>
+<!ELEMENT day (item+, total)>
+<!ATTLIST day date CDATA #REQUIRED>

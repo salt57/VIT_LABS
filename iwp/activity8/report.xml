@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sales SYSTEM "activity8.dtd">
+<sales>
+   <day date="2023-04-01">
+      <item>
+         <name>Aspirin</name>
+         <quantity>10</quantity>
+         <price>0.1</price>
+      </item>
+      <item>
+         <name>Paracetamol</name>
+         <quantity>20</quantity>
+         <price>0.2</price>
+      </item>
+      <total>5.0</total>
+   </day>
+   <day date="2023-04-02">
+      <item>
+         <name>Aspirin</name>
+         <quantity>15</quantity>
+         <price>0.1</price>
+      </item>
+      <item>
+         <name>Band-Aid</name>
+         <quantity>5</quantity>
+         <price>0.5</price>
+      </item>
+      <total>3.5</total>
+   </day>
+</sales>
